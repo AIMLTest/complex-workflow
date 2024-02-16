@@ -5,25 +5,25 @@ jobs:
     name: Print Date on linux
     runs-on: ubuntu-latest
     steps:
-      name: Print Date
-      uses: actions/checkout@v2
-      name: Step two
-      run: date
+      - name: Print Date
+        uses: actions/checkout@v2
+      - name: Step two
+        run: date
 
   windows:
     name: Print Date on windows
     runs-on: windows-latest
     steps:
-      name: Print Date
-      uses: actions/checkout@v2
-      name: Step two
-      run: date
+      -  name: Print Date
+         uses: actions/checkout@v2
+      -  name: Step two
+         run: date
   depends:
     needs: [ubuntu,windows]
     runs-on: macos-latest
     steps:
-      name: Print Date
-      run: date
+      -  name: Print Date
+         run: date
     
 
   
