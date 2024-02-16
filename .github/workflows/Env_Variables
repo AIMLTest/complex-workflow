@@ -1,7 +1,7 @@
 name: Custom Environment Variables
 env:
   WORKSPACE_ENVIRONMENT_VARIABLE: 'custom workspace environment variable'
-on: [push]
+on: [workflow_dispatch]
 jobs:
   ubuntu:
     env:
