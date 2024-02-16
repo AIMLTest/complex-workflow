@@ -22,7 +22,7 @@ jobs:
           echo "${{ env.JOB_ENVIRONMENT_VARIABLE }}"
           echo "${{ env.STEP_ENVIRONMENT_VARIABLE }} Not defined"
           echo "New env variable"
-          echo "${{ First_Env_VARIABLE }}"
+          echo "${{vars.FIRST_ENV_VARIABLE }}"
   windows:
     env:
       JOB_ENVIRONMENT_VARIABLE: 'custom job environment variable for windows'
