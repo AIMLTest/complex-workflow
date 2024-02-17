@@ -1,5 +1,5 @@
 name: custom_artifact
-on: push
+on: [workflow_dispatch]
 jobs:
   job1:
     name: Build custom artifact
