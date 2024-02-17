@@ -4,6 +4,7 @@ env:
   App_Name: app2
 jobs:
   lint:
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
       - name: setup python
