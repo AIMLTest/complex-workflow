@@ -1,5 +1,5 @@
 name: complex-workflow
-on: push
+on: [workflow_dispatch]
 jobs:
   ubuntu:
     name: Print Date on linux
