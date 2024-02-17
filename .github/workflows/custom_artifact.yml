@@ -1,0 +1,19 @@
+name: custom_artifact
+on: push
+jobs:
+  job1:
+    name: Build custom artifact
+    env:
+      My_Artifact: myartifact
+    runs-on: ubuntu-latest
+    steps:
+      -  name: checkout
+         uses: actions/checkout@v1
+      -  name: upload artifact
+         uses: actions/upload_artifact@v1
+         with:
+           name: ${{env.My_Artifact}}
+           path: .
+           
+
+  
