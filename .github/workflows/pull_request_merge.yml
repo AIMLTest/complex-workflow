@@ -1,0 +1,15 @@
+name: Auto Merge Owner PR
+on: 
+  pull_request: 
+    types: [opened,reopened]
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    if: github.actor=='AIMLTest'
+    steps:
+      - uses: actions/checkout@v1
+      - uses: hmarr/auto_approve-action@v1
+      
+      
+  
+    
