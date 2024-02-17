@@ -1,0 +1,22 @@
+name: CI/CD Pipeline
+on:[push]
+env:
+  App_Name: app2
+jobs:
+  lint:
+    steps:
+      - uses: actions/checkout@v1
+      - name: setup python
+        uses: actions/setup-python@v1
+      - name: Install requirements
+        run: pip install --quiet --requirement requirements.txt
+      - name: Lint code
+        run: |
+          flake8 --ignore=E501,E231 *.py
+          pylint --disable=C0301 --disable=C0326 *.py
+      - name: Run unit tests
+          run: |
+            python -m unittest --verbose --failfast
+
+        
+    
